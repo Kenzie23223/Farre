@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Farrell Fadli Siregar | Personal Portfolio</title>
+
+    <style>
+      :root {
+        --navy: #0b1f3a;
+        --navy-2: #14305a;
+        --red: #c8102e;
+      }
+      html { scroll-behavior: smooth; }
+      body { padding-top: 56px; color: #212529; }
+      section { padding: 5rem 0; }
+      section[id] { scroll-margin-top: 56px; }
+
+      .navbar { background-color: var(--navy) !important; }
+
+      /* Hero */
+      .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
+      .hero .accent { color: #ff8a9b; }
+      .hero-img {
+        width: 270px; height: 270px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid rgba(255,255,255,.85);
+        background-color: rgba(255,255,255,.2); /* shows a circle until your photo is added */
+      }
+      .btn-accent { background: var(--red); border-color: var(--red); color: #fff; }
+      .btn-accent:hover { background: #a60d26; border-color: #a60d26; color: #fff; }
+
+      .section-title { font-weight: 700; margin-bottom: 2.5rem; color: var(--navy); }
+      .section-title::after {
+        content: ""; display: block; width: 60px; height: 4px;
+        background: var(--red); margin: .6rem auto 0; border-radius: 2px;
+      }
+      #contact .section-title { color: #fff; }
+
+      .card-title, h5.heading { color: var(--navy); }
+      h6.sub { color: var(--red); font-weight: 600; }
+
+      .project-thumb {
+        background: #e9ecef; color: #6c757d;
+        display: flex; align-items: center; justify-content: center;
+        height: 180px; font-size: .9rem;
+      }
+      .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+      blockquote.motto {
+        border-left: 4px solid var(--red); padding-left: 1rem;
+        font-style: italic; color: var(--navy);
+      }
+      .card { transition: transform .2s, box-shadow .2s; }
+      .card.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); }
+      .skill-tag { font-weight: 500; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Farrell Fadli Siregar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== 1. HERO / PERSONAL IDENTITY ===== -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-md-7 order-2 order-md-1">
+            <p class="text-uppercase mb-2 opacity-75">Hello, I'm</p>
+            <h1 class="display-4 fw-bold">Farrell Fadli Siregar</h1>
+            <p class="fs-3 mb-3 accent">Building Bridges, Connecting Nations</p>
+            <p class="lead">
+              I'm a motivated student who is interested in international relations, world affairs,
+              and different cultures. I enjoy learning new things, developing my communication skills,
+              and understanding global issues. My dream is to become a diplomat and represent my
+              country, Indonesia, on the international stage.
+            </p>
+            <a href="#projects" class="btn btn-accent btn-lg me-2">See my work</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Contact me</a>
+          </div>
+
+          <div class="col-md-5 order-1 order-md-2 text-center">
+            <!-- ADD YOUR PHOTO HERE: put your picture path in the src attribute,
+                 e.g. <img src="Farrell_PersonalPortfolio/profile.jpg" ...> -->
+            <img class="hero-img" alt="Photo of Farrell Fadli Siregar">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. ABOUT ME ===== -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title text-center">About Me</h2>
+
+        <div class="row g-4">
+          <!-- Hobbies -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h5 class="card-title">Hobbies &amp; Interests</h5>
+                <ul class="mb-0">
+                  <li>Learning about international relations, cultures and world politics</li>
+                  <li>Watching and following football around the world</li>
+                  <li>Exploring different cultures, countries, and languages</li>
+                  <li>Learning English, Mandarin and Dutch while improving my communication skills</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Currently learning -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h5 class="card-title">Currently Learning</h5>
+                <p class="card-text mb-0">
+                  I'm learning English, Mandarin and Dutch, and working on my communication skills.
+                  I'm excited about global issues and about understanding how different countries and
+                  cultures see the world.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Goals -->
+          <div class="col-md-12 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h5 class="card-title">My Goals</h5>
+                <h6 class="sub">Short-term</h6>
+                <ul>
+                  <li>Improve my English speaking skills</li>
+                  <li>Develop confidence in public speaking</li>
+                </ul>
+                <h6 class="sub">Long-term</h6>
+                <ul class="mb-0">
+                  <li>Become a professional diplomat representing Indonesia on the international stage</li>
+                  <li>Master 4 languages</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <!-- Fun facts -->
+          <div class="col-lg-7">
+            <h5 class="mb-3 heading">Fun Facts</h5>
+            <ul class="list-group">
+              <li class="list-group-item">My dream career is to become a diplomat.</li>
+              <li class="list-group-item">I enjoy learning about different countries and cultures.</li>
+              <li class="list-group-item">I want to represent Indonesia internationally one day as a diplomat.</li>
+              <li class="list-group-item">I'm interested in international politics and global relations.</li>
+            </ul>
+          </div>
+
+          <!-- Motto -->
+          <div class="col-lg-5 d-flex align-items-center">
+            <blockquote class="motto fs-4">
+              "Diplomacy is the art of restraining power."
+              <footer class="blockquote-footer mt-2">Henry Kissinger, my favourite motto</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. PROJECTS & ACHIEVEMENTS ===== -->
+    <section id="projects" class="bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Projects &amp; Achievements</h2>
+
+        <div class="row g-4">
+
+          <!-- Project 1: School project -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+              <!-- ADD PHOTO: replace this div with <img src="..." alt="..."> -->
+              <div class="project-thumb">Add project photo here</div>
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">School Project</span>
+                <h5 class="card-title">Academic Project</h5>
+                <p class="card-text">
+                  Conducting research, collecting information, and presenting findings through a
+                  structured academic paper. This project helps me develop research, writing, and
+                  analytical skills.
+                </p>
+              </div>
+              <div class="card-footer bg-white">
+                <!-- ADD AWARDS/RECOGNITION HERE if you have any -->
+                <small class="text-muted">Skills: research, writing, analysis</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Extracurricular -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="project-thumb">Add project photo here</div>
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Extracurricular</span>
+                <h5 class="card-title">International Relations</h5>
+                <p class="card-text">
+                  Exploring global issues, international cooperation, and diplomatic discussions.
+                  This activity develops my confidence, critical thinking, and ability to understand
+                  different perspectives.
+                </p>
+              </div>
+              <div class="card-footer bg-white">
+                <!-- ADD AWARDS/RECOGNITION HERE if you have any -->
+                <small class="text-muted">Skills: confidence, critical thinking, perspective-taking</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Personal project -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="project-thumb">Add project photo here</div>
+              <div class="card-body">
+                <span class="badge bg-warning text-dark mb-2">Personal Project</span>
+                <h5 class="card-title">Football Content Creation</h5>
+                <p class="card-text">
+                  Creating and publishing football content about the Indonesian league, especially
+                  Persija and the Indonesian national team. This project helps me develop creativity,
+                  digital communication, consistency, and audience engagement.
+                </p>
+              </div>
+              <div class="card-footer bg-white">
+                <!-- ADD AWARDS/RECOGNITION HERE if you have any -->
+                <small class="text-muted">
+                  Find it on TikTok:
+                  <a href="https://www.tiktok.com/@f21football" target="_blank" rel="noopener">@f21football</a>
+                </small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. SKILLS ===== -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title text-center">Skills</h2>
+
+        <div class="row g-4">
+          <!-- Technical -->
+          <div class="col-md-6 col-lg-3">
+            <h5 class="heading">Technical</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">Canva <span class="badge bg-success skill-tag">Confident</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">CapCut <span class="badge bg-warning text-dark skill-tag">Intermediate</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">TikTok <span class="badge bg-success skill-tag">Confident</span></li>
+            </ul>
+          </div>
+
+          <!-- Creative -->
+          <div class="col-md-6 col-lg-3">
+            <h5 class="heading">Creative</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">Music <span class="badge bg-success skill-tag">Confident</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Video editing <span class="badge bg-warning text-dark skill-tag">Intermediate</span></li>
+            </ul>
+          </div>
+
+          <!-- Soft -->
+          <div class="col-md-6 col-lg-3">
+            <h5 class="heading">Soft Skills</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">Public speaking <span class="badge bg-success skill-tag">Confident</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Leadership <span class="badge bg-success skill-tag">Confident</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Teamwork <span class="badge bg-success skill-tag">Confident</span></li>
+            </ul>
+          </div>
+
+          <!-- Languages -->
+          <div class="col-md-6 col-lg-3">
+            <h5 class="heading">Languages Spoken</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">English <span class="badge bg-success skill-tag">Fluent</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Indonesian <span class="badge bg-success skill-tag">Fluent</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Mandarin <span class="badge bg-secondary skill-tag">Beginner</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Dutch <span class="badge bg-info text-dark skill-tag">Beginner&ndash;Intermediate</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CONTACT & SOCIAL ===== -->
+    <section id="contact" class="text-white" style="background: var(--navy);">
+      <div class="container text-center">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="lead mb-4">I'd love to hear from you, whether it's about international relations, football, or just to say hi.</p>
+
+        <p class="fs-5">
+          <strong>School email:</strong>
+          <a href="mailto:farrell.fadli.siregar@harapanprestasi.sch.id" class="link-light">farrell.fadli.siregar@harapanprestasi.sch.id</a>
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+          <a href="https://www.tiktok.com/@f21football" target="_blank" rel="noopener" class="btn btn-outline-light">TikTok: @f21football (Football Content)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-black text-white-50 text-center py-3">
+      <small>&copy; 2026 Farrell Fadli Siregar. All rights reserved.</small>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper (needed for the mobile navbar menu) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
